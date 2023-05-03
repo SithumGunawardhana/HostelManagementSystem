@@ -13,19 +13,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="815.0" prefWidth="960.0" style="-fx-background-color: white; -fx-background-radius: 25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.ManageStudentCFormController">
+<AnchorPane fx:id="pane" prefHeight="815.0" prefWidth="960.0" style="-fx-background-color: white; -fx-background-radius: 25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.StudentFormController">
    <children>
       <ImageView fitHeight="799.0" fitWidth="960.0" layoutX="-1.0" layoutY="-1.0">
          <image>
             <Image url="@../assets/Background.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtStudentId" focusColor="#405aa800" labelFloat="true" layoutX="14.0" layoutY="77.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="txtStudentName" focusColor="#405aa800" labelFloat="true" layoutX="342.0" layoutY="77.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="txtStudentAddress" focusColor="#405aa800" labelFloat="true" layoutX="653.0" layoutY="77.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="txtStudentNo" focusColor="#405aa800" labelFloat="true" layoutX="14.0" layoutY="196.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtStudentId" focusColor="#405aa800" labelFloat="true" layoutX="14.0" layoutY="77.0" onAction="#txtStudentIDOnAction" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input"  />
+      <JFXTextField fx:id="txtStudentName" focusColor="#405aa800" labelFloat="true" layoutX="342.0" layoutY="77.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input"  />
+      <JFXTextField fx:id="txtStudentAddress" focusColor="#405aa800" labelFloat="true" layoutX="653.0" layoutY="77.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input"  />
+      <JFXTextField fx:id="txtStudentNo" focusColor="#405aa800" labelFloat="true" layoutX="14.0" layoutY="196.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input"  />
       <JFXDatePicker fx:id="cmbBirthDay" defaultColor="#147ec4" layoutX="342.0" layoutY="196.0" prefHeight="41.0" prefWidth="293.0" style="-fx-border-radius: 10; -fx-border-color: black;" />
-      <JFXComboBox fx:id="cmbGender" focusColor="#ffffff00" labelFloat="true" layoutX="653.0" layoutY="196.0" onAction="#cmbGenderOnAction" prefHeight="41.0" prefWidth="293.0" style="-fx-border-radius: 10; -fx-border-color: black;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXComboBox fx:id="cmbGender" focusColor="#ffffff00" labelFloat="true" layoutX="653.0" layoutY="196.0" onAction="#cmbGenderOnAction" prefHeight="41.0" prefWidth="293.0" style="-fx-border-radius: 10; -fx-border-color: black;" styleClass="text-input"  />
       <JFXButton fx:id="btnAddStudent" layoutX="55.0" layoutY="353.0" onAction="#btnAddStudentNoOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: blue;" text="SAVE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />

@@ -29,18 +29,17 @@ public class Navigation {
                 break;
 
             case STUDENT:
-                window.setTitle("add student");
-                initUI("ManageStudentForm.fxml");
+                window.setTitle("Student Form");
+                initUI("StudentForm.fxml");
+                break;
+            case ROOM:
+                window.setTitle("Room Form");
+                initUI("RoomForm.fxml");
                 break;
 
-
-            case PAYMENT:
-                window.setTitle("payment");
-                initUI("PaymentDetails.fxml");
-                break;
 
             default:
-                new Alert(Alert.AlertType.ERROR,"Not Sutibale UI Found").show();
+                new Alert(Alert.AlertType.ERROR,"error").show();
         }
     }
 

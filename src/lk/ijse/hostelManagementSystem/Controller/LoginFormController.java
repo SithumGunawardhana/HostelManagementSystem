@@ -26,7 +26,9 @@ try {
 
         Navigation.navigate(Routes.DASHBORD, pane);
     }else {
+
         new Alert(Alert.AlertType.ERROR,"your name or password incorrect").show();
+        Navigation.navigate(Routes.LOGIN,pane);
     }
 }catch (Exception e){
           new Alert(Alert.AlertType.ERROR,e.getMessage()).show();

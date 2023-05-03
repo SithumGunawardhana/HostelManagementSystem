@@ -20,7 +20,7 @@
             <Image url="@../assets/Background.png" />
          </image>
       </ImageView>
-      <JFXPasswordField fx:id="txtPassword" focusColor="#405aa800" layoutX="481.0" layoutY="343.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
+      <JFXPasswordField fx:id="txtPassword" focusColor="#405aa800" layoutX="481.0" layoutY="343.0" prefHeight="50.0" prefWidth="336.0" promptText="  Password" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" >
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -42,7 +42,7 @@
          </cursor>
       </JFXButton>
       <ButtonBar layoutX="698.0" layoutY="449.0" prefHeight="40.0" prefWidth="79.0" />
-      <JFXTextField fx:id="txtEmail" cache="true" layoutX="483.0" layoutY="262.0" prefHeight="50.0" prefWidth="336.0" promptText="User Name" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#ffffff00">
+      <JFXTextField fx:id="txtEmail" cache="true" layoutX="483.0" layoutY="262.0" prefHeight="50.0" prefWidth="336.0" promptText="User Name" style="-fx-background-radius: 10; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-font-style: white;" styleClass="text-input" >
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

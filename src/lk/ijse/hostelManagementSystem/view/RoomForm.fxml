@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="815.0" prefWidth="960.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.ManageRoomFormController">
+<AnchorPane prefHeight="815.0" prefWidth="960.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.Controller.RoomFormController">
    <children>
-      <ImageView fitHeight="815.0" fitWidth="960.0" layoutX="1.0" layoutY="-3.0">
+      <ImageView fitHeight="815.0" fitWidth="961.0" layoutY="-3.0">
          <image>
             <Image url="@../assets/Background.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtRoomTypeID" focusColor="#405aa800" labelFloat="true" layoutX="124.0" layoutY="67.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtRoomTypeID" focusColor="#405aa800" labelFloat="true" layoutX="124.0" layoutY="67.0" onAction="#txtRoomIdOnAction" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" />
       <JFXButton fx:id="btnSaveRoom" layoutX="54.0" layoutY="305.0" onAction="#btnSaveRoomOnAction" prefHeight="41.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: blue;" text="SAVE" textFill="#f2ecec">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -28,8 +28,8 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXTextField fx:id="txtKeyMoney" focusColor="#405aa800" labelFloat="true" layoutX="508.0" layoutY="172.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
-      <JFXTextField fx:id="txtQtq" focusColor="#405aa800" labelFloat="true" layoutX="124.0" layoutY="172.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtKeyMoney" focusColor="#405aa800" labelFloat="true" layoutX="508.0" layoutY="172.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" />
+      <JFXTextField fx:id="txtQtq" focusColor="#405aa800" labelFloat="true" layoutX="124.0" layoutY="172.0" onKeyReleased="#validateFieldsOnKeyRelease" prefHeight="41.0" prefWidth="293.0" style="-fx-border-color: black; -fx-border-radius: 10;" styleClass="text-input" />
       <TableView fx:id="tblRoom" layoutX="37.0" layoutY="385.0" prefHeight="396.0" prefWidth="910.0" style="-fx-background-color: white;">
         <columns>
           <TableColumn fx:id="colRoomTypeId" prefWidth="215.0" text="Room tytpe ID" />
@@ -38,7 +38,7 @@
             <TableColumn fx:id="colQty" prefWidth="187.0" text="QTY" />
         </columns>
       </TableView>
-      <JFXComboBox fx:id="cmbRoomType" focusColor="#ffffff00" labelFloat="true" layoutX="498.0" layoutY="67.0" onAction="#cmbRoomTypeOnAction" prefHeight="41.0" prefWidth="293.0" style="-fx-border-radius: 10; -fx-border-color: black;" styleClass="text-input" stylesheets="@../css/css.css" unFocusColor="#4d4d4d00" />
+      <JFXComboBox fx:id="cmbRoomType" focusColor="#ffffff00" labelFloat="true" layoutX="498.0" layoutY="67.0" onAction="#cmbRoomTypeOnAction" prefHeight="41.0" prefWidth="293.0" style="-fx-border-radius: 10; -fx-border-color: black;" styleClass="text-input" />
       <JFXButton fx:id="btnSerchRoom" layoutX="508.0" layoutY="308.0" onAction="#btnSearchRoomOnAction" prefHeight="31.0" prefWidth="179.0" ripplerFill="TRANSPARENT" style="-fx-background-color: gray;" text="SEARCH" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />

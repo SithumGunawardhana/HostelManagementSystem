@@ -12,7 +12,7 @@
    <children>
       <Pane layoutX="9.0" layoutY="9.0" prefHeight="815.0" prefWidth="307.0" style="-fx-background-color: darkpink;">
          <children>
-            <JFXButton fx:id="btnDashBoard" layoutX="2.0" layoutY="79.0" onAction="#btnDashBoardOnAction" prefHeight="68.0" prefWidth="304.0" ripplerFill="#24242400" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="Welcome Form" textFill="WHITE">
+            <JFXButton fx:id="btnDashBoard" layoutX="2.0" layoutY="79.0" onAction="#btnDashBoardOnAction" prefHeight="68.0" prefWidth="304.0" ripplerFill="#24242400" style="-fx-background-radius: 10;" text="Welcome Form" textFill="#eee7e7">
                <font>
                   <Font size="36.0" />
                </font>
@@ -20,7 +20,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnManageStudent" layoutX="14.0" layoutY="176.0" onAction="#btnManageStudentOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="Student Form" textFill="WHITE">
+            <JFXButton fx:id="btnManageStudent" layoutX="14.0" layoutY="176.0" onAction="#btnManageStudentOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#f5f3f3" style="-fx-background-radius: 10;" text="Student Form" textFill="#f2eded">
                <font>
                   <Font size="18.0" />
                </font>
@@ -28,7 +28,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnManageRoom" layoutX="2.0" layoutY="288.0" onAction="#btnManageRoomsOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="     Room Form" textFill="WHITE">
+            <JFXButton fx:id="btnManageRoom" layoutX="2.0" layoutY="288.0" onAction="#btnManageRoomsOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" text="Room Form" textFill="#ebe7e7">
                <font>
                   <Font size="18.0" />
                </font>
@@ -36,7 +36,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnReserveRoom" layoutX="10.0" layoutY="401.0" onAction="#btnReserveRoomOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="Reservation Form" textFill="WHITE">
+            <JFXButton fx:id="btnReserveRoom" layoutX="10.0" layoutY="401.0" onAction="#btnReserveRoomOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" text="Resevation Form" textFill="#f5f4f4">
                <font>
                   <Font size="18.0" />
                </font>
@@ -44,17 +44,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnLogout" layoutX="10.0" layoutY="750.0" onAction="#btnLogoutOnAction" prefHeight="51.0" prefWidth="86.0" ripplerFill="#242424" style="-fx-background-radius: 10;" text="Logout                       " textFill="#e8f807">
+            <JFXButton fx:id="btnLogout" layoutX="10.0" layoutY="750.0" onAction="#btnLogoutOnAction" prefHeight="51.0" prefWidth="86.0" ripplerFill="#242424" style="-fx-background-radius: 10;" text="Logout " textFill="#e8f807">
                <font>
                   <Font name="System Bold" size="16.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
-            <JFXButton fx:id="btnPayment" layoutX="10.0" layoutY="528.0" onAction="#btnPaymentOnAction" prefHeight="67.0" prefWidth="304.0" ripplerFill="#242424" style="-fx-background-radius: 10;" stylesheets="@../css/css.css" text="payment" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -73,11 +65,6 @@
             <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="38.0" layoutY="415.0">
                <image>
                   <Image url="@../assets/reservation.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="35.0" layoutY="542.0">
-               <image>
-                  <Image url="@../assets/payment.png" />
                </image>
             </ImageView>
          </children>

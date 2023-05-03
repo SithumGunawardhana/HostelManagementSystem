@@ -1,6 +1,4 @@
-package lk.ijse.hostelManagementSystem.Controller;/*
-    @author Dasun
-*/
+package lk.ijse.hostelManagementSystem.Controller;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -24,34 +22,28 @@ public class DashboardFormController {
     public JFXButton btnReserveRoom;
     public Pane contex;
     public AnchorPane pane;
-    public JFXButton btnPayment;
 
     public void btnDashBoardOnAction(ActionEvent actionEvent) throws IOException {
         Navigation.navigate(Routes.DASHBORD,pane);
     }
 
     public void btnManageStudentOnAction(ActionEvent actionEvent) throws IOException {
-        setUi("/lk/ijse/hostelManagementSystem/view/ManageStudentForm");
+        setUi("/lk/ijse/hostelManagementSystem/view/StudentForm");
 
     }
 
     public void btnManageRoomsOnAction(ActionEvent actionEvent) throws IOException {
-        setUi("/lk/ijse/hostelManagementSystem/view/ManageRoomForm");
+        setUi("/lk/ijse/hostelManagementSystem/view/RoomForm");
     }
 
     public void btnReserveRoomOnAction(ActionEvent actionEvent) throws IOException {
-        setUi("/lk/ijse/hostelManagementSystem/view/ReserveRoomForm");
+        setUi("/lk/ijse/hostelManagementSystem/view/ReservetionForm");
     }
 
     public void btnLogoutOnAction(ActionEvent actionEvent) throws IOException {
         Navigation.navigate(Routes.LOGIN,pane);
     }
 
-
-
-    public void btnPaymentOnAction(ActionEvent actionEvent) throws IOException {
-        setUi("/lk/ijse/hostelManagementSystem/view/PaymentDetails");
-    }
 
     public void setUi(String ui) throws IOException {
         Parent node = FXMLLoader.load(getClass().getResource(ui + ".fxml"));

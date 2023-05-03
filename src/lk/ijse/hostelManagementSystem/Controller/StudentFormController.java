@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.StudentBO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
@@ -19,10 +20,8 @@ import lk.ijse.hostelManagementSystem.util.Navigation;
 import lk.ijse.hostelManagementSystem.util.Routes;
 import lk.ijse.hostelManagementSystem.view.dtm.StudentDTM;
 
-import java.sql.SQLException;
 
-
-public class ManageStudentCFormController {
+public class StudentFormController {
 
     public JFXTextField txtStudentId;
     public JFXTextField txtStudentName;
@@ -41,6 +40,7 @@ public class ManageStudentCFormController {
     public TableColumn colDOB;
     public TableColumn colGender;
     public TableView tblStudent;
+    public AnchorPane pane;
 
     StudentBO studentBO = (StudentBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.STUDENT);
 
@@ -51,6 +51,7 @@ public class ManageStudentCFormController {
              studentBO.saveStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
              new Alert(Alert.AlertType.CONFIRMATION,"saved").show();
              clearText();
+             Navigation.navigate(Routes.STUDENT,pane);
          }catch (Exception e){
              new Alert(Alert.AlertType.ERROR,"not save").show();
          }
@@ -58,24 +59,44 @@ public class ManageStudentCFormController {
     }
 
     public void btnUpdateStudentOnAction(ActionEvent actionEvent) {
+         try{
          studentBO.updateStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(), txtStudentAddress.getText(), txtStudentNo.getText(), cmbBirthDay.getValue(), (String) cmbGender.getValue()));
-    }
+         clearText();
+         new Alert(Alert.AlertType.CONFIRMATION,"Updated!").show();
+         Navigation.navigate(Routes.STUDENT,pane);
+    }catch (Exception e) {
+             new Alert(Alert.AlertType.ERROR,"not Update!").show();
+         }
+         }
 
     public void btnSearchStudentOnAction(ActionEvent actionEvent) {
-        StudentDTO student = studentBO.searcStudent(txtStudentId.getText());
+         try {
 
-        txtStudentId.setText(student.getStudentId());
-        txtStudentName.setText(student.getName());
-        txtStudentAddress.setText(student.getAddress());
-        txtStudentNo.setText(student.getContactNo());
-        cmbBirthDay.setValue(student.getDob());
-        cmbGender.setValue(student.getGender());
 
+             StudentDTO student = studentBO.searcStudent(txtStudentId.getText());
+
+             txtStudentId.setText(student.getStudentId());
+             txtStudentName.setText(student.getName());
+             txtStudentAddress.setText(student.getAddress());
+             txtStudentNo.setText(student.getContactNo());
+             cmbBirthDay.setValue(student.getDob());
+             cmbGender.setValue(student.getGender());
+         }catch (Exception e){
+             new Alert(Alert.AlertType.ERROR,"not have this search id").show();
+         }
     }
 
     public void btnDeleteStudentOnAction(ActionEvent actionEvent) {
-        studentBO.deleteStudent(txtStudentId.getText());
-        clearText();
+         try {
+             studentBO.deleteStudent(txtStudentId.getText());
+             clearText();
+             new Alert(Alert.AlertType.CONFIRMATION,"Deleted!").show();
+             Navigation.navigate(Routes.STUDENT,pane);
+         }catch (Exception e) {
+             new Alert(Alert.AlertType.ERROR,"Not delete!").show();
+
+
+         }
     }
 
     public void cmbGenderOnAction() {
@@ -114,4 +135,19 @@ public class ManageStudentCFormController {
         txtStudentNo.setText("");
     }
 
+    public void txtStudentIDOnAction(ActionEvent actionEvent) {
+        try {
+            StudentDTO student = studentBO.searcStudent(txtStudentId.getText());
+
+            txtStudentId.setText(student.getStudentId());
+            txtStudentName.setText(student.getName());
+            txtStudentAddress.setText(student.getAddress());
+            txtStudentNo.setText(student.getContactNo());
+            cmbBirthDay.setValue(student.getDob());
+            cmbGender.setValue(student.getGender());
+
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, "Not have this enter id").show();
+        }
+    }
 }
